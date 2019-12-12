@@ -1,0 +1,252 @@
+1)
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            int j = 0;
+            string path = "C:\\Users\\user\\source\\repos\\C#\\22\\22-1\\TextFile1.txt";
+            int scount = File.ReadAllLines(path).Length;
+            string[] lines = new string[scount];
+            using (StreamReader sr = new StreamReader(path))
+            {
+                int x = 0;
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines[x] = line;
+                    x++;
+                }
+            }
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                bool flag = false;
+                while((line = sr.ReadLine()) != null)
+                {
+                    for (j = 0; j < line.Length; j++)
+                    {
+                        if (line[j] == ' ')
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag == true) break;
+                    i++;
+                }
+            }
+            lines[i] = lines[i].Remove(0, j+1);
+            using (StreamWriter sw = new StreamWriter(path, false, Encoding.Default))
+            {
+                sw.Write("");
+            }
+            using (StreamWriter sw = new StreamWriter(path, true, Encoding.Default))
+            {
+                for (int x = i; x < scount; x++)
+                {
+                    sw.WriteLine(lines[x]);
+                }
+            }
+            using (StreamReader sr = new StreamReader(path))
+            {
+                Console.WriteLine(sr.ReadToEnd());
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = "C:\\Users\\user\\source\\repos\\C#\\22\\22-2\\TextFile2.txt";
+            Console.Write("N = ");
+            int n = Int32.Parse(Console.ReadLine());
+            Console.Write("K = ");
+            int k = Int32.Parse(Console.ReadLine());
+            using (StreamWriter sw = new StreamWriter(path, false, Encoding.Default))
+            {
+                sw.Write("");
+            }
+            using (StreamWriter sw = new StreamWriter(path, true, Encoding.Default))
+            {
+                string line = "";
+                for (int i = 0; i < k; i++)
+                    line += '*';
+                for (int i = 0; i < n; i++) sw.WriteLine(line);
+            }
+            using (StreamReader sr = new StreamReader(path))
+            {
+                Console.WriteLine(sr.ReadToEnd());
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string path1 = "C:\\Users\\user\\source\\repos\\C#\\22\\22-3\\TextFile3-1.txt";
+            string path2 = "C:\\Users\\user\\source\\repos\\C#\\22\\22-3\\TextFile3-2.txt";
+            int s1count = File.ReadAllLines(path1).Length;
+            int s2count = File.ReadAllLines(path2).Length;
+            List<string> lines1 = new List<string>();
+            List<string> lines2 = new List<string>();
+            using (StreamReader sr = new StreamReader(path1))
+            {
+                int i = 0;
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines1.Add(line);
+                    i++;
+                }
+            }
+            using (StreamReader sr = new StreamReader(path2))
+            {
+                int i = 0;
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines2.Add(line);
+                    i++;
+                }
+            }
+            for (int i = s2count-1; i >= 0; i--)
+            {
+                lines1.Insert(0, lines2[i]);
+            }
+            using (StreamWriter sw = new StreamWriter(path1, false, Encoding.Default))
+            {
+                sw.Write("");
+            }
+            using (StreamWriter sw = new StreamWriter(path1, true, Encoding.Default))
+            {
+                for (int i = 0; i < s2count+s1count; i++)
+                {
+                    sw.WriteLine(lines1[i]);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = "C:\\Users\\user\\source\\repos\\C#\\22\\22-4\\TextFile4.txt";
+            List<string> lines = new List<string>();
+            using (StreamReader sr = new StreamReader(path))
+            {
+                int i = 0;
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines.Add(line);
+                    i++;
+                }
+            }
+            int j;
+            for (int i = 0; i < lines.Count; i++)
+            {
+                j = 0;
+                while (j < lines[i].Length-1)
+                {
+                    if (lines[i][j] == ' ' && lines[i][j + 1] == ' ')
+                    {
+                        lines[i] = lines[i].Remove(j, 1);
+                    }
+                    else j++;
+                }
+            }
+            using (StreamWriter sw = new StreamWriter(path, false, Encoding.Default))
+            {
+                sw.Write("");
+            }
+            using (StreamWriter sw = new StreamWriter(path, true, Encoding.Default))
+            {
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    sw.WriteLine(lines[i]);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ka = 0, kp;
+            string path = "C:\\Users\\user\\source\\repos\\C#\\22\\22-5\\TextFile5.txt";
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    kp = 0;
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        if (line[i] != ' ')
+                        {
+                            if (kp == 5) ka++;
+                            break;
+                        }
+                        kp++;
+                    }
+                }
+            }
+            Console.WriteLine(ka);
+            Console.ReadKey();
+        }
+    }
+}

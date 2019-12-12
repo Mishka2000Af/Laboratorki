@@ -1,0 +1,156 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите K: ");
+            int K = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите L: ");
+            int L = Convert.ToInt32(Console.ReadLine());
+            double s = 0;
+            int[] array = new int[N + 1];
+            Console.WriteLine("Введите массив:");
+            for (int i = 1; i < N + 1; i++)
+            {
+                Console.Write($"{i} = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (int i = K; i <= L; i++)
+            {
+                s = s + array[i];
+            }
+            Console.WriteLine($"Среднее арифметическое = {s / (L - K + 1)}");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            double d;
+            int[] array = new int[N + 1];
+            Console.WriteLine("Введите массив:");
+            for (int i = 1; i < N + 1; i++)
+            {
+                Console.Write($"{i} = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            d = array[2] - array[1];
+            for (int i = 3; i < N + 1; i++)
+            {
+                if (array[i] - array[i - 1] != d)
+                {
+                    d = 0;
+                    break;
+                }
+            }
+            Console.WriteLine($"Ответ: {d}");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N + 1];
+            Console.WriteLine("Введите массив:");
+            for (int i = 1; i < N + 1; i++)
+            {
+                Console.Write($"{i} = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int min = array[2];
+            for (int i = 2; i < N + 1; i += 2)
+            {
+                if (array[i] < min)
+                    min = array[i];
+            }
+            Console.WriteLine($"min = {min}");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N + 1];
+            Console.WriteLine("Введите массив:");
+            for (int i = 1; i < N + 1; i++)
+            {
+                Console.Write($"{i} = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int max = 1;
+            for (int i = N; i > 1; i--)
+            {
+                if (array[i] > array[i - 1])
+                    max = i;
+                break;
+            }
+            Console.WriteLine($"Ответ: {max}");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N + 1];
+            Console.WriteLine("Введите массив:");
+            for (int i = 1; i < N + 1; i++)
+            {
+                Console.Write($"{i} = ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (int i = 1; i < N -1 ; i++)
+            {
+                for (int j = i + 1; j <= N; j++)
+                    if (array[i] == array[j])
+                        Console.WriteLine($"Пара: {i} и {j}");
+            }
+            Console.ReadKey();
+        }
+    }
+}

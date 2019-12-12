@@ -1,0 +1,294 @@
+1)
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            int k = 0;
+            int i = 0;
+            while (s[i] == ' ')
+            {
+                s = s.Remove(i, 1);
+            }
+            i = s.Length - 1;
+            while (s[i] == ' ')
+            {
+                s = s.Remove(i, 1);
+                i--;
+            }
+            i = 0;
+            while (i < s.Length-1)
+            {
+                if (s[i] == ' ' && s[i + 1] == ' ')
+                {
+                    s = s.Remove(i, 1);
+                }
+                else i++;
+            }
+            while (s.Contains(' ') == true)
+            {
+                k++;
+                s = s.Remove(s.IndexOf(' '), 1);
+            }
+            Console.WriteLine(k+1);
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            int i = 0, k = 0, min = int.MaxValue;
+            while (s[i] == ' ')
+            {
+                s = s.Remove(i, 1);
+            }
+            i = s.Length - 1;
+            while (s[i] == ' ')
+            {
+                s = s.Remove(i, 1);
+                i--;
+            }
+            i = 0;
+            while (i < s.Length)
+            {
+                if (s[i] == ' ')
+                {
+                    if (min > k) min = k;
+                    k = 0;
+                }
+                k++;
+                i++;
+            }
+            if (min > k) min = k;
+            Console.WriteLine(min-1);
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            int i = 0;
+            char c;
+            while (s[i] == ' ')
+            {
+                s = s.Remove(i, 1);
+            }
+            i = s.Length - 1;
+            while (s[i] == ' ')
+            {
+                s = s.Remove(i, 1);
+                i--;
+            }
+            i = 0;
+            c = s[i++];
+            while (i < s.Length)
+            {
+                if (s[i] == c)
+                {
+                    s = s.Remove(i, 1);
+                    s = s.Insert(i, ".");
+                }
+                if (s[i] == ' ')
+                {
+                    while (s[i] == ' ' && s[i+1] == ' ') i++;
+                    c = s[++i];
+                }
+                i++;
+            }
+            Console.WriteLine(s);
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            int k = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == 'А' || s[i] == 'У' || s[i] == 'О' || s[i] == 'Ы' || s[i] == 'И' || s[i] == 'Э' || s[i] == 'Я' || s[i] == 'Ю' || s[i] == 'Ё' || s[i] == 'е' || s[i] == 'а' || s[i] == 'у' || s[i] == 'о' || s[i] == 'ы' || s[i] == 'и' || s[i] == 'э' || s[i] == 'я' || s[i] == 'ю' || s[i] == 'ё' || s[i] == 'у') k++;
+            }
+            Console.WriteLine(k);
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            int k = 0;
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                if (s[i] == '\\')
+                {
+                    k++;
+                }
+                if (k == 2)
+                {
+                    s = (s.Remove(0, i + 1));
+                    Console.WriteLine(s.Remove(s.IndexOf('\\')));
+                    break;
+                }
+            }
+            if (k == 1) Console.WriteLine('\\');
+            Console.ReadKey();
+        }
+    }
+}
+
+6)
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            int k = 0;
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                if (s[i] == '\\')
+                {
+                    k++;
+                }
+                if (k == 2)
+                {
+                    s = (s.Remove(0, i + 1));
+                    Console.WriteLine(s.Remove(s.IndexOf('\\')));
+                    break;
+                }
+            }
+            if (k == 1) Console.WriteLine('\\');
+            Console.ReadKey();
+        }
+    }
+}
+
+7)
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("S = ");
+            string s = Console.ReadLine();
+            string s1 = "";
+            int i = 0;
+            bool x = true;
+            string temp1, temp2;
+            while (i < s.Length)
+            {
+                if (x == true)
+                {
+                    if ((i + 1) % 2 == 0)
+                    {
+                        s1 += s[i];
+                        s = s.Remove(i, 1);
+                        x = false;
+                    }
+                    else i++;
+                }
+                if (x == false)
+                {
+                    if ((i + 1) % 2 != 0)
+                    {
+                        s1 += s[i];
+                        s = s.Remove(i, 1);
+                        x = true;
+                    }
+                    else i++;
+                }
+            }
+            for (i = 0; i < s.Length/2; i++)
+            {
+                temp1 = Convert.ToString(s[i]);
+                temp2 = Convert.ToString(s[s.Length - i - 1]);
+                s = s.Remove(i, 1);
+                s = s.Insert(i, temp2);
+                s = s.Remove(s.Length - i - 1, 1);
+                s = s.Insert(s.Length - i, temp1);
+            }
+            Console.WriteLine(s1 + s);
+            Console.ReadKey();
+        }
+    }
+}

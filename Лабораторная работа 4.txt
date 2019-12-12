@@ -1,0 +1,129 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("0 < a < 360 градусов");
+            Console.Write("Введите a:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"a в радианах = {a / 180}");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("0 < a < 2П");
+            Console.Write("Введите a:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"a в градусах = {a * 180}");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите X:");
+            double X = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите A:");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите Y:");
+            double Y = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"1 кг стоит {A / X}");
+            Console.WriteLine($"Y кг стоит {Y * (A / X)}");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите V1:");
+            double V1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите V2:");
+            double V2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите S:");
+            double S = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите T:");
+            double T = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"S через T часов = {S + V1 * T + V2 *  T}км");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите B:");
+            double B = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"x = {-B / A}");
+            Console.ReadKey();
+        }
+    }
+}
+
+6)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A1:");
+            double A1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите B1:");
+            double B1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите C1:");
+            double C1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите A2:");
+            double A2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите B2:");
+            double B2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите C2:");
+            double C2 = Convert.ToDouble(Console.ReadLine());
+            double x, y;
+            x = (C1 * B2 - C2 * B1) / (B2 * A1 - B1 * A2);
+            y = (C2 * A1 - C1 * A2) / (B2 * A1 - B1 * A2);
+            Console.WriteLine($"x = {x}");
+            Console.WriteLine($"y = {y}");
+            Console.ReadKey();
+        }
+    }

@@ -1,0 +1,153 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            if ((A > 2) && (B <= 3))
+                Console.WriteLine("Выражение истино");
+            else
+                Console.WriteLine("Выражение ложно");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите C:");
+            int C = Convert.ToInt32(Console.ReadLine());
+            if ((A < B) && (B < C))
+                Console.WriteLine("Выражение истино");
+            else
+                Console.WriteLine("Выражение ложно");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            if ((A > 9) && (A < 100) && ((A % 2) == 0))
+                Console.WriteLine("Высказывание истино");
+            else
+                Console.WriteLine("Высказывание ложно");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            if (((A / 100 < A / 10 - A / 100 *10) && (A / 10 - A / 100 * 10 < A % 10)) || ((A / 100 > A / 10 - A / 100 * 10) && (A / 10 - A / 100 * 10 > A % 10)))
+                Console.WriteLine("Высказывание истино");
+            else
+                Console.WriteLine("Высказывание ложно");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            if (A / 1000 == A % 10 && A % 1000 / 100 == A % 100 / 10)
+                Console.WriteLine("Высказывание истино");
+            else
+                Console.WriteLine("Высказывание ложно");
+            Console.ReadKey();
+        }
+    }
+}
+
+6)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите a:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите b:");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите c:");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (Math.Pow(c,2) == Math.Pow(a, 2) + Math.Pow(b, 2) || Math.Pow(b, 2) == Math.Pow(a, 2) + Math.Pow(c, 2) || Math.Pow(a, 2) == Math.Pow(c, 2) + Math.Pow(b, 2))
+                Console.WriteLine("Высказывание истино");
+            else
+                Console.WriteLine("Высказывание ложно");
+            Console.ReadKey();
+        }
+    }
+}
+
+7)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите a:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите b:");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите c:");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a + b > c && a + c > b && c + b > a)
+                Console.WriteLine("Высказывание истино");
+            else
+                Console.WriteLine("Высказывание ложно");
+            Console.ReadKey();
+        }
+    }
+}

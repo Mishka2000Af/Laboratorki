@@ -1,0 +1,270 @@
+1)
+using System;
+using System.Collections.Generic;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[N + 1];
+            Console.WriteLine("Введите массив A:");
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write($"A[{i}] = ");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            A[N] = -999;
+            List<int> B = new List<int>();
+            List<int> C = new List<int>();
+            int b = 1;
+            for (int i = 0; i < N; i++)
+            {
+                if (A[i] == A[i + 1])
+                    b++;
+                else
+                {
+                    B.Add(b);
+                    C.Add(A[i]);
+                    b = 1;
+                }
+            }
+            Console.WriteLine("Массив B: ");
+            for (int i = 0; i < B.Count; i++)
+                Console.Write($"{B[i]} ");
+            Console.WriteLine();
+            Console.WriteLine("Массив C: ");
+            for (int i = 0; i < C.Count; i++)
+                Console.Write($"{C[i]} ");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+using System.Collections.Generic;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите L: ");
+            int L = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[N + 1];
+            Console.WriteLine("Введите массив A:");
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write($"A[{i}] = ");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            A[N] = -999;
+            List<int> B = new List<int>();
+            int b = 1;
+            for (int i = 0; i < N; i++)
+            {
+                if (A[i] == A[i + 1])
+                    b++;
+                else if (b > L)
+                {
+                    B.Add(0);
+                    b = 1;
+                }
+                else
+                {
+                    while (b != 0)
+                    {
+                        B.Add(A[i]);
+                        b--;
+                    }
+                    b = 1;
+                }
+            }
+            for (int i = 0; i < B.Count; i++)
+                Console.Write($"{B[i]} ");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+using System.Collections.Generic;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите K: ");
+            int K = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[N + 1];
+            Console.WriteLine("Введите массив A:");
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write($"A[{i}] = ");
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            A[N] = -999;
+            List<int> B = new List<int>();
+            List<int> C = new List<int>();
+            int b = 1;
+            for (int i = 0; i < N; i++)
+            {
+                if (A[i] == A[i + 1])
+                    b++;
+                else
+                {
+                    B.Add(b);
+                    C.Add(A[i]);
+                    b = 1;
+                }
+            }
+            C.Insert(K - 1, C[C.Count - 1]);
+            C.RemoveAt(C.Count - 1);
+            C.Add(C[K]);
+            C.RemoveAt(K);
+            B.Insert(K - 1, B[B.Count - 1]);
+            B.RemoveAt(B.Count - 1);
+            B.Add(B[K]);
+            B.RemoveAt(K);
+
+            for(int i = 0; i < C.Count; i++)
+            {
+                while (B[i] != 0)
+                {
+                    Console.Write($"{C[i]} ");
+                    B[i]--;
+                }
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[N , 2];
+            Console.WriteLine("Введите координаты точек:");
+            for (int i = 0; i < N; i++)
+            {
+                Console.WriteLine($"{i + 1} точка:");
+                for (int j = 0; j < 2; j++)
+                {
+                    if(j == 0)
+                    {
+                        Console.Write($"X: ");
+                        A[i,j] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    else
+                    {
+                        Console.Write($"Y: ");
+                        A[i, j] = Convert.ToInt32(Console.ReadLine());
+                    }
+                }
+            }
+            double max = 0;
+            for (int i = 0; i < N; i++)
+            {
+                if (A[i, 0] < 0 && A[i, 1] > 0)
+                {
+                    double R = Math.Sqrt(Math.Pow(A[i, 0], 2) + Math.Pow(A[i, 1], 2));
+                    if (R > max)
+                        max = R;
+                }
+            }
+            if(max == 0)
+            {
+                Console.WriteLine("Точка с нуливыми координатами))) (0;0)");
+            }
+            else
+            {
+                for (int i = 0; i < N; i++)
+                {
+                    if (A[i, 0] < 0 && A[i, 1] > 0)
+                    {
+                        double R = Math.Sqrt(Math.Pow(A[i, 0], 2) + Math.Pow(A[i, 1], 2));
+                        if (R == max)
+                            Console.WriteLine($"Точка {i + 1}");
+                    }
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[N, 2];
+            Console.WriteLine("Введите координаты точек:");
+            for (int i = 0; i < N; i++)
+            {
+                Console.WriteLine($"{i + 1} точка:");
+                for (int j = 0; j < 2; j++)
+                {
+                    if (j == 0)
+                    {
+                        Console.Write($"X: ");
+                        A[i, j] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    else
+                    {
+                        Console.Write($"Y: ");
+                        A[i, j] = Convert.ToInt32(Console.ReadLine());
+                    }
+                }
+            }
+            double max = 0;
+            double P;
+            for (int i = 0; i < N - 2; i++)
+                for (int j = i + 1; j < N - 1; j++)
+                    for (int k = j + 1; k < N; k++)
+                    {
+                        P = Math.Sqrt(Math.Pow(A[i, 0] - A[j, 0], 2) + Math.Pow(A[i, 1] - A[j, 1], 2)) + Math.Sqrt(Math.Pow(A[j, 0] - A[k, 0], 2) + Math.Pow(A[j, 1] - A[k, 1], 2)) + Math.Sqrt(Math.Pow(A[k, 0] - A[i, 0], 2) + Math.Pow(A[k, 1] - A[i, 1], 2));
+                        if (P > max)
+                            max = P;
+                    }
+            for (int i = 0; i < N - 2; i++)
+                for (int j = i + 1; j < N - 1; j++)
+                    for (int k = j + 1; k < N; k++)
+                    {
+                        P = Math.Sqrt(Math.Pow(A[i, 0] - A[j, 0], 2) + Math.Pow(A[i, 1] - A[j, 1], 2)) + Math.Sqrt(Math.Pow(A[j, 0] - A[k, 0], 2) + Math.Pow(A[j, 1] - A[k, 1], 2)) + Math.Sqrt(Math.Pow(A[k, 0] - A[i, 0], 2) + Math.Pow(A[k, 1] - A[i, 1], 2));
+                        if (P == max)
+                            Console.WriteLine($"Точки: {i + 1}, {j + 1}, {k + 1}");
+                    }
+            Console.ReadKey();
+        }
+    }
+}
+
+

@@ -1,0 +1,148 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            for (int i = A; i <= B; i++) 
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(i);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            while (A > B)
+            {
+                A = A - B;
+            }
+            Console.WriteLine($"Длина незанятой части = {A}");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int K = 0;
+            int s = 0;
+            while (N > s)
+            {
+                K = K + 1;
+                s = s + K;
+            }
+            Console.WriteLine($"K = {K}");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите P: ");
+            int P = Convert.ToInt32(Console.ReadLine());
+            float N = 1000;
+            int K = 0;
+            while (N <= 1100)
+            {
+                N = N + N * P / 100;
+                K++;
+            }
+            Console.WriteLine($"K = {K}");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            while (A != 0 && B != 0)
+            {
+                if (A >= B)
+                    A = A % B;
+                else
+                    B = B % A;
+            }
+            Console.WriteLine($"НОД = {A + B}");
+            Console.ReadKey();
+        }
+    }
+}
+
+6)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int f1 = 1;
+            int f2 = 1;
+            int K = 2;
+            while (N > f2)
+            {
+                f2 = f1 + f2;
+                f1 = f2 - f1;
+                K++;
+            }
+            if (N == f2)
+                Console.WriteLine($"K = {K}");
+            else
+                Console.WriteLine("Число не является числом Фибоначчи");
+            Console.ReadKey();
+        }
+    }
+}

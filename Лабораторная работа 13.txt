@@ -1,0 +1,147 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N];
+            array[0] = 1;
+            Console.Write($"{array[0]}, ");
+            for (int i = 1; i <= N - 1; i++)
+            {
+                array[i] = array[i - 1] + 2;
+                Console.Write($"{array[i]}, ");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите D: ");
+            int D = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N];
+            array[0] = A;
+            Console.Write($"{array[0]}, ");
+            for (int i = 1; i <= N - 1; i++)
+            {
+                array[i] = array[i - 1] * D;
+                Console.Write($"{array[i]}, ");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите A: ");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B: ");
+            int B = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N];
+            array[0] = A;
+            array[1] = B;
+            int s = A + B;
+            Console.Write($"{array[0]}, ");
+            Console.Write($"{array[1]}, ");
+            for (int i = 2; i <= N - 1; i++)
+            {
+                array[i] = s;
+                s = s + array[i];
+                Console.Write($"{array[i]}, ");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N];
+            int P;
+            P = N / 2;
+            for (int i = 0; i <= N - 1; i++)
+            {
+                array[i] = i + 1;
+                Console.Write($"{array[i]}, ");
+            }
+                Console.WriteLine();
+            for (int i = 0; i <= P - 1; i++)
+            {
+                Console.Write($"{array[i]}, {array[N - 1 - i]}, ");
+            }
+            if (N % 2 == 1)
+                Console.Write(array[P]);
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N + 1];
+            for (int i = 1; i <= N; i++)
+            {
+                array[i] = i;
+                Console.Write($"{array[i]}, ");
+            }
+            Console.WriteLine();
+            int s = 1;
+            while (s <= N)
+            {
+                Console.Write($"{array[s]}, ");
+                s = s + 2;
+            }
+            for (int i = N / 2; i > 0; i--)
+            {
+                Console.Write($"{array[i * 2]}, ");
+            }
+            Console.ReadKey();
+        }
+    }
+}

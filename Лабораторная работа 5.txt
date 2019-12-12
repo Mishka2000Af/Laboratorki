@@ -1,0 +1,94 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите размер файла в байтах:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Размер в килобайтах: {B / (8 * 1024)}");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            if(A > B)
+                Console.WriteLine($"Кол-во отрезков B, размещенных на отрезке A = {A / B}");
+            else
+                Console.WriteLine($"Условие не верно!");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            if(A > B)
+                Console.WriteLine($"Длина незанятой части отрезка A = {A % B}");
+            else
+                Console.WriteLine($"Условие не верно!");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Новое число: {A % 10 *10 + A / 10}");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Новое число: {A / 100 + A % 100 *10}");
+            Console.ReadKey();
+        }
+    }
+}

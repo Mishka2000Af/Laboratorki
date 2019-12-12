@@ -1,0 +1,213 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[N, N];
+            Console.WriteLine("Введите массив:");
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    Console.Write($" A[{i},{j}] = ");
+                    A[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (int k = 0; k < N / 2; k++)
+            {
+                for (int i = k; i < N - k; i++)
+                    Console.Write($"{A[i, k]} ");
+                for (int j = k + 1; k < N - k; j++)
+                    Console.Write($"{A[N - k, j]} ");
+                for (int i = N - k - 1; i >= 0; i--)
+                    Console.Write($"{A[i, j]} ");
+                for (int j = N - k -2; j > k; j--)
+                    Console.Write($"{A[k, j]} ");
+            }
+            Console.Write($"{A[N / 2, N / 2]} ");
+            Console.ReadKey();
+        }
+    }
+} 
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите M: ");
+            int M = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[M, N];
+            Console.WriteLine("Введите массив:");
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    Console.Write($" A[{i},{j}] = ");
+                    A[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.Write("Введите K: ");
+            int K = Convert.ToInt32(Console.ReadLine());
+            int S = 0, P = 1;
+            for (int j = 0; j < N; j++)
+            {
+                S += A[K, j];
+                P *= A[K, j];
+            }
+            Console.WriteLine($"Сумма = {S}");
+            Console.WriteLine($"Произведение = {P}");
+            Console.ReadKey();
+        }
+    }
+} 
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите M: ");
+            int M = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[M, N];
+            Console.WriteLine("Введите массив:");
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    Console.Write($" A[{i},{j}] = ");
+                    A[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            int min = 99999, P = 1;
+            for (int j = 0; j < N; j++)
+            {
+                for (int i = 0; i < M; i++)
+                {
+                    P *= A[i, j];
+                }
+                if (P < min)
+                    min = P;
+            }
+            for (int j = 0; j < N; j++)
+            {
+                for (int i = 0; i < M; i++)
+                {
+                    P *= A[i, j];
+                }
+                if (P == min)
+                    Console.WriteLine($"Строка: {j + 1}");
+            }
+            Console.WriteLine($"min = {min}");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите M: ");
+            int M = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[M, N];
+            Console.WriteLine("Введите массив:");
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    Console.Write($" A[{i},{j}] = ");
+                    A[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            double S = 0, K = 0;
+            for (int j = 0; j < N; j++)
+            {
+                for (int i = 0; i < M; i++)
+                {
+                    S += A[i, j];
+                }
+                for (int i = 0; i < M; i++)
+                {
+                    if (A[i, j] > S / M);
+                    K++;
+                }
+                Console.WriteLine($"Столбец {j + 1}: {K}");
+                S = 0; K = 0;
+            }
+            Console.ReadKey();
+        }
+    }
+} 
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите M: ");
+            int M = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] A = new int[M, N];
+            Console.WriteLine("Введите массив:");
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    Console.Write($" A[{i},{j}] = ");
+                    A[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            int k = 0, l = 0;
+            for (int j = 0; j < N; j++)
+            {
+                for (int i = 0; i < M; i++)
+                {
+                    if (A[i, j] % 2 == 0)
+                        k++;
+                }
+                if (k == 0)
+                {
+                    Console.WriteLine($"Столбец {j + 1}");
+                    break;
+                }
+                else
+                    l++;
+                k = 0;
+            }
+            if (l == N)
+                Console.WriteLine(0);
+            Console.ReadKey();
+        }
+    }
+} 

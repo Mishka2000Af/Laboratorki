@@ -1,0 +1,91 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N:");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Кол-во секунд, прошедших с начала последней минуты = {N % 60}");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите K:");
+            int K = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Номер дня недели для K-ого дня года  = {K % 7}");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите K:");
+            int K = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите N:");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Номер дня недели для K-ого дня года  = {(K + N -2) % 7 +1}");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A:");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите B:");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите C:");
+            int C = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Кол-во квадратов, размещенных на прямоугольнике = {(A / C) * (B / C)}");
+            Console.WriteLine($"Площадь незанятой часипрямоугольника = {(A * B)-(A / C) * (B / C) * Math.Pow(C,2)}");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N:");
+            int N = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Соответствующее столетие  = {(N - 1) / 100 +1}");
+            Console.ReadKey();
+        }
+    }
+}

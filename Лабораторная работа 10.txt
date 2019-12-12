@@ -1,0 +1,114 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите цену 1 кг. : ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"Стоимость {i/10f} кг. = {y * (i / 10f)}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            float s = 1;
+            for (int i = 1; i <= N; i++) 
+            {
+                s = s * (1 + i / 10f);
+            }
+            Console.WriteLine($"Произведение = {s}");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int s = 0;
+            for (int i = 1; i <= N; i++) 
+            {
+                s = s + (2 * i -1);
+                Console.WriteLine($"{i}^2 = {s}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A: ");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            double s = 0;
+            for (int i = 1; i <= N; i++) 
+            {
+                s = s + Math.Pow(A,i);
+            }
+            Console.WriteLine($"Сумма = {s}");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите A: ");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            double s = 1;
+            int a = -1;
+            for (int i = 1; i <= N; i++) 
+            {
+                s = s + a * Math.Pow(A,i);
+                a = -a;
+            }
+            Console.WriteLine($"Сумма = {s}");
+            Console.ReadKey();
+        }
+    }
+}
+

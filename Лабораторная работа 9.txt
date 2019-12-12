@@ -1,0 +1,567 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите номер дня: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите номер месяца: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            switch (x)
+            {
+                case 1:
+                    Console.Write("Первое ");
+                    break;
+                case 2:
+                    Console.Write("Второе ");
+                    break;
+                case 3:
+                    Console.Write("Третье ");
+                    break;
+                case 4:
+                    Console.Write("Четвертое ");
+                    break;
+                case 5:
+                    Console.Write("Пятое ");
+                    break;
+                case 6:
+                    Console.Write("Шестое ");
+                    break;
+                case 7:
+                    Console.Write("Седьмое ");
+                    break;
+                case 8:
+                    Console.Write("Восьмое ");
+                    break;
+                case 9:
+                    Console.Write("Девятое ");
+                    break;
+                case 10:
+                    Console.Write("Десятое ");
+                    break;
+                case 11:
+                    Console.Write("Одиннадцатое ");
+                    break;
+                case 12:
+                    Console.Write("Двенадцатое ");
+                    break;
+                case 13:
+                    Console.Write("Тринадцатое ");
+                    break;
+                case 14:
+                    Console.Write("Четырнадцатое ");
+                    break;
+                case 15:
+                    Console.Write("Пятнадцатое ");
+                    break;
+                case 16:
+                    Console.Write("Шестнадцатое ");
+                    break;
+                case 17:
+                    Console.Write("Семнадцатое ");
+                    break;
+                case 18:
+                    Console.Write("Восемнадцатое ");
+                    break;
+                case 19:
+                    Console.Write("Девятнадцатое ");
+                    break;
+                case 20:
+                    Console.Write("Двадцатое ");
+                    break;
+                case 21:
+                    Console.Write("Двадцать первое ");
+                    break;
+                case 22:
+                    Console.Write("Двадцать второе ");
+                    break;
+                case 23:
+                    Console.Write("Двадцать третье ");
+                    break;
+                case 24:
+                    Console.Write("Двадцать четвертое ");
+                    break;
+                case 25:
+                    Console.Write("Двадцать пятое ");
+                    break;
+                case 26:
+                    Console.Write("Двадцать шестое ");
+                    break;
+                case 27:
+                    Console.Write("Двадцать седьмое ");
+                    break;
+                case 28:
+                    Console.Write("Двадцать восьмое ");
+                    break;
+                case 29:
+                    Console.Write("Двадцать девятое ");
+                    break;
+                case 30:
+                    Console.Write("Тридцатое ");
+                    break;
+                case 31:
+                    Console.Write("Тридцать первое ");
+                    break;
+            }
+            switch (y)
+            {
+                case 1:
+                    Console.Write("января ");
+                    break;
+                case 2:
+                    Console.Write("февраля ");
+                    break;
+                case 3:
+                    Console.Write("марта ");
+                    break;
+                case 4:
+                    Console.Write("апреля ");
+                    break;
+                case 5:
+                    Console.Write("мая ");
+                    break;
+                case 6:
+                    Console.Write("июня ");
+                    break;
+                case 7:
+                    Console.Write("июля ");
+                    break;
+                case 8:
+                    Console.Write("августа ");
+                    break;
+                case 9:
+                    Console.Write("сентября ");
+                    break;
+                case 10:
+                    Console.Write("октября ");
+                    break;
+                case 11:
+                    Console.Write("ноября ");
+                    break;
+                case 12:
+                    Console.Write("декабря ");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите исходное направление робота(С, Ю, В, З): ");
+            string C = Console.ReadLine();
+            Console.Write("Введите число посланной команды: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            char c = C[0];
+            switch (c)
+            {
+                case 'С':
+                    switch (y)
+                    {
+                        case 0:
+                            Console.WriteLine("Направление после выполнения полученной команды: С");
+                            break;
+                        case 1:
+                            Console.WriteLine("Направление после выполнения полученной команды: З");
+                            break;
+                        case -1:
+                            Console.WriteLine("Направление после выполнения полученной команды: В");
+                            break;
+                    }
+                    break;
+                case 'Ю':
+                    switch (y)
+                    {
+                        case 0:
+                            Console.WriteLine("Направление после выполнения полученной команды: Ю");
+                            break;
+                        case 1:
+                            Console.WriteLine("Направление после выполнения полученной команды: В");
+                            break;
+                        case -1:
+                            Console.WriteLine("Направление после выполнения полученной команды: З");
+                            break;
+                    }
+                    break;
+                case 'В':
+                    switch (y)
+                    {
+                        case 0:
+                            Console.WriteLine("Направление после выполнения полученной команды: В");
+                            break;
+                        case 1:
+                            Console.WriteLine("Направление после выполнения полученной команды: С");
+                            break;
+                        case -1:
+                            Console.WriteLine("Направление после выполнения полученной команды: Ю");
+                            break;
+                    }
+                    break;
+                case 'З':
+                    switch (y)
+                    {
+                        case 0:
+                            Console.WriteLine("Направление после выполнения полученной команды: З");
+                            break;
+                        case 1:
+                            Console.WriteLine("Направление после выполнения полученной команды: Ю");
+                            break;
+                        case -1:
+                            Console.WriteLine("Направление после выполнения полученной команды: С");
+                            break;
+                    }
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите кол-во учебных заданий: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            if (y / 10 == 1)
+            {
+                switch (y)
+                {
+                    case 10:
+                        Console.WriteLine("Десять учебных заданий");
+                        break;
+                    case 11:
+                        Console.WriteLine("Одиннадцать учебных заданий");
+                        break;
+                    case 12:
+                        Console.WriteLine("Двенадцать учебных заданий");
+                        break;
+                    case 13:
+                        Console.WriteLine("Тринадцать учебных заданий");
+                        break;
+                    case 14:
+                        Console.WriteLine("Четырнадцать учебных заданий");
+                        break;
+                    case 15:
+                        Console.WriteLine("Пятнадцать учебных заданий");
+                        break;
+                    case 16:
+                        Console.WriteLine("Шеснадцать учебных заданий");
+                        break;
+                    case 17:
+                        Console.WriteLine("Семнадцать учебных заданий");
+                        break;
+                    case 18:
+                        Console.WriteLine("Восемнадцать учебных заданий");
+                        break;
+                    case 19:
+                        Console.WriteLine("Девятнадцать учебных заданий");
+                        break;
+                }
+            }
+            else
+            {
+                switch (y / 10)
+                {
+                    case 2:
+                        Console.Write("Двадцать ");
+                        break;
+                    case 3:
+                        Console.Write("Тридцать ");
+                        break;
+                    case 4:
+                        Console.Write("Сорок ");
+                        break;
+                }
+            }
+            switch (y % 10)
+            {
+                case 1:
+                    Console.Write("одно ");
+                    break;
+                case 2:
+                    Console.Write("два ");
+                    break;
+                case 3:
+                    Console.Write("три ");
+                    break;
+                case 4:
+                    Console.Write("четыре ");
+                    break;
+                case 5:
+                    Console.Write("пять ");
+                    break;
+                case 6:
+                    Console.Write("шесть ");
+                    break;
+                case 7:
+                    Console.Write("два ");
+                    break;
+                case 8:
+                    Console.Write("восемь ");
+                    break;
+                case 9:
+                    Console.Write("девять ");
+                    break;
+            }
+            switch (y % 10)
+            {
+                case 0:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    Console.Write("учебных заданий");
+                    break;
+                case 1:
+                    Console.Write("учебное задание");
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    Console.Write("учебных заданий");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            switch (y / 100)
+            {
+                case 1:
+                    Console.Write("Сто ");
+                    break;
+                case 2:
+                    Console.Write("Двести ");
+                    break;
+                case 3:
+                    Console.Write("Триста ");
+                    break;
+                case 4:
+                    Console.Write("Четыреста ");
+                    break;
+                case 5:
+                    Console.Write("Пятьсот ");
+                    break;
+                case 6:
+                    Console.Write("Шестьсот ");
+                    break;
+                case 7:
+                    Console.Write("Семьсот ");
+                    break;
+                case 8:
+                    Console.Write("Восемьсот ");
+                    break;
+                case 9:
+                    Console.Write("Девятьсот ");
+                    break;
+            }
+            if (y % 100 / 10 == 1)
+            {
+                switch (y % 100)
+                {
+                    case 10:
+                        Console.Write("десять ");
+                        break;
+                    case 11:
+                        Console.Write("одиннадцать ");
+                        break;
+                    case 12:
+                        Console.Write("двенадцать ");
+                        break;
+                    case 13:
+                        Console.Write("тринадцать ");
+                        break;
+                    case 14:
+                        Console.Write("четырнадцать ");
+                        break;
+                    case 15:
+                        Console.Write("пятнадцать ");
+                        break;
+                    case 16:
+                        Console.Write("шеснадцать ");
+                        break;
+                    case 17:
+                        Console.Write("семнадцать ");
+                        break;
+                    case 18:
+                        Console.Write("восемнадцать ");
+                        break;
+                    case 19:
+                        Console.Write("девятнадцать ");
+                        break;
+                }
+            }
+            else
+            {
+                switch (y % 100 / 10)
+                {
+                    case 2:
+                        Console.Write("двадцать ");
+                        break;
+                    case 3:
+                        Console.Write("тридцать ");
+                        break;
+                    case 4:
+                        Console.Write("сорок ");
+                        break;
+                    case 5:
+                        Console.Write("пятьдесят ");
+                        break;
+                    case 6:
+                        Console.Write("шестьдесят ");
+                        break;
+                    case 7:
+                        Console.Write("семьдесят ");
+                        break;
+                    case 8:
+                        Console.Write("восемьдесят ");
+                        break;
+                    case 9:
+                        Console.Write("девяносто ");
+                        break;
+                }
+                switch (y % 10)
+                {
+                    case 1:
+                        Console.Write("один ");
+                        break;
+                    case 2:
+                        Console.Write("два ");
+                        break;
+                    case 3:
+                        Console.Write("три ");
+                        break;
+                    case 4:
+                        Console.Write("четыре ");
+                        break;
+                    case 5:
+                        Console.Write("пять ");
+                        break;
+                    case 6:
+                        Console.Write("шесть ");
+                        break;
+                    case 7:
+                        Console.Write("семь ");
+                        break;
+                    case 8:
+                        Console.Write("восемь ");
+                        break;
+                    case 9:
+                        Console.Write("девять ");
+                        break;
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите год: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Год ");
+            switch (y % 10)
+            {
+                case 0:
+                case 1:
+                    Console.Write("бел");
+                    break;
+                case 2:
+                case 3:
+                    Console.Write("черн");
+                    break;
+                case 4:
+                case 5:
+                    Console.Write("зелен");
+                    break;
+                case 6:
+                case 7:
+                    Console.Write("красн");
+                    break;
+                case 8:
+                case 9:
+                    Console.Write("желт");
+                    break;
+            }
+            switch (y % 12)
+            {
+                case 0:
+                    Console.Write("ой обезьяны");
+                    break;
+                case 1:
+                    Console.Write("ой курицы");
+                    break;
+                case 2:
+                    Console.Write("ой собаки");
+                    break;
+                case 3:
+                    Console.Write("ой свиньи");
+                    break;
+                case 4:
+                    Console.Write("ой крысы");
+                    break;
+                case 5:
+                    Console.Write("ой коровы");
+                    break;
+                case 6:
+                    Console.Write("ого тигра");
+                    break;
+                case 7:
+                    Console.Write("ого зайца");
+                    break;
+                case 8:
+                    Console.Write("ого дракона");
+                    break;
+                case 9:
+                    Console.Write("ой змеи");
+                    break;
+                case 10:
+                    Console.Write("ой лошади");
+                    break;
+                case 11:
+                    Console.Write("ой овцы");
+                    break;
+            }
+            Console.ReadKey();
+        }
+    }
+}

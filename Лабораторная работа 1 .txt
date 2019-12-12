@@ -1,0 +1,106 @@
+1)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите a:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите b:");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int S;
+            int P;
+            S = a * b;
+            P = 2 * (a + b);
+            Console.WriteLine($"S = {S}");
+            Console.WriteLine($"P = {P}");
+            Console.ReadKey();
+        }
+    }
+}
+
+2)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите d:");
+            double d = Convert.ToDouble(Console.ReadLine());
+            const double Pi = 3.14; 
+            double L;
+            L = Pi * d;
+            Console.WriteLine($"L = {L}");
+            Console.ReadKey();
+        }
+    }
+}
+
+3)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите a:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите b:");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"(a+b)/2 = {(a+b)/2}");
+            Console.ReadKey();
+        }
+    }
+}
+
+4)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите a:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите b:");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"a^2+b^2 = {Math.Pow(a, 2) + Math.Pow(b, 2)}");
+            Console.WriteLine($"a^2-b^2 = {Math.Pow(a, 2) - Math.Pow(b, 2)}");
+            Console.WriteLine($"a^2*b^2 = {Math.Pow(a, 2) * Math.Pow(b, 2)}");
+            Console.WriteLine($"a^2/b^2 = {Math.Pow(a, 2) / Math.Pow(b, 2)}");
+            Console.ReadKey();
+        }
+    }
+}
+
+5)
+using System;
+
+namespace laba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите a:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите b:");
+            double b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"|a|+|b| = {Math.Abs(a) + Math.Abs(b)}");
+            Console.WriteLine($"|a|-|b| = {Math.Abs(a) - Math.Abs(b)}");
+            Console.WriteLine($"|a|*|b| = {Math.Abs(a) * Math.Abs(b)}");
+            Console.WriteLine($"|a|/|b| = {Math.Abs(a) / Math.Abs(b)}");
+            Console.ReadKey();
+        }
+    }
+}
